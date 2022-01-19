@@ -1,0 +1,70 @@
+/*BASE*/
+
+:root{ /*Declarar variavél quando sei as cores principais do site*/
+    /*vantagens e que troco todas as cores so de uma vez do que declarar 1 a 1 e ter que procurar depois*/
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+body{
+    background: var(--preta) ;   /*utilizei a variavel*/
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+*{ /*o (*) reflete a toda a page, para retirar as margens padrão do navegador*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*cria caixa padrão e faz os elementos se espremer até dar na caixa*/
+}
+
+header .container{
+    display: flex; /*maneira de alinhar elementos em tela*/
+    flex-direction: row; /*propriedade default*/
+    align-items: center; /*alhinhados no centro*/
+    justify-content: space-between;
+}
+
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times; /*declaro fonte principal 'Arial Black'*/
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+header nav a{ /*pega o header, pega o elemento nav, pega os links a*/
+    text-decoration: none; /*retira linhas de links*/
+    margin-right: 20px; /*espaçamento a direita entre elementos*/
+    color: #aaa;
+}
+
+header nav a:hover{/*evento especifico(hover) quando o mouse tiver em cima*/
+    color:#fff;
+} 
+ 
+/*FILME PRINCIPAL*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgb(0,0,0,.50), rgba(0, 0, 0, 0.5)100%), url('/img/blinders-fundo.jpg');
+    
+    height: 400px; /*definir altura*/
+    background-size: cover; /*definir tamanho*/
+
+    display: flex;
+    flex-direction: column; /*vertical abaixo do elemento*/
+    justify-content: center;
+    align-items:flex-start;
+
+
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px; /*espaço do butão ao elemento acima*/
+}
+
+.titulo{
+    font-size: 40px;
+}
+
